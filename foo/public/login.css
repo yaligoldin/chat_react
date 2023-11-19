@@ -1,0 +1,76 @@
+body {
+    background-image: url("background.jpg");
+    font-family: 'Poppins', sans-serif;
+}
+
+#form {
+    height: fit-content;
+    margin: 20vh auto 0 auto;
+    padding: 50px;
+    background-image: url("banner.jpg");
+    border-radius: 4px;
+    font-size: 12px;
+    background-size: cover;
+
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80px;
+    color: white;
+    background-color: rgb(70 88 255);
+    border: none;
+    text-align: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-control {
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 10px;
+	width: 30%;
+    justify-content: center;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 15px;
+    height: 15px;
+}
+
+.image {
+    text-align: center;
+    height:fit-content;
+}
+
+.buttons {
+    text-align: center;
+    font-size: 13px;
+}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Chatter chat screen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="chats.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="chats.js"></script>
+    <div class="containerChat">
+        <div class="leftSide">
+            <div class="header">
+                <div class="userimg">
+                    <img src="profile.jpg" class="cover">
+                </div>
+                <span style="font-size:x-large; margin-left: 10px;">John Johnson</span>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                    crossorigin="anonymous"></script>
+                <button type="button" style="margin-left: auto" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"> <i class="bi bi-person-add"></i> </button>
+                <button type="button" style="margin-left: 5px" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#LogOutModal"> <i class="bi bi-box-arrow-right"></i></button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Contact</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input placeholder="Contact name...">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="LogOutModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to log out?
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button onclick="log_out()" type="button" class="btn btn-danger">Log out</button>
+                                <script> function log_out() { window.location.href = 'login.html' }</script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search_chat">
+                <div>
+                    <input type="text" placeholder="Search a chat...">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div class="chat_list">
+                <div class="block active">
+                    <div class="imgbx">
+                        <img src="thomas.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4> Thomas</h4>
+                            <p class="time"> 15:36</p>
+                        </div>
+                        <div class="message_p">
+                            <p>When are you coming over?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="Max.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4> Max</h4>
+                            <p class="time"> 12:17</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Thomas thinks you are coming over today 😂</p>
+                            <b>1</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="imgbx">
+                        <img src="Liza.jpg" class="cover">
+                    </div>
+                    <div class="details">
+                        <div class="listHead">
+                            <h4> Liza</h4>
+                            <p class="time"> 09:12</p>
+                        </div>
+                        <div class="message_p">
+                            <p>Good morning!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            <div class="header">
+                <div class="imgText">
+                    <div class="userimg">
+                        <img src="thomas.jpg" class="cover">
+                    </div>
+                    <h4>Thomas Specter<br><span>Online</span></h4>
+                </div>
+            </div>
+            <div class="chatBox">
+                <div class="message my_message">
+                    <p>Liza sent me good morning!!<br><span>09:16</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>I told you she is into you<br><span>09:17</span></p>
+                </div>
+                <div class="message my_message">
+                    <p>I think you might be right<br><span>09:17</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>Ask her if she wants to meet today<br><span>09:18</span></p>
+                </div>
+                <div class="message my_message">
+                    <p>Nahh it's too dangerous<br><span>09:19</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>Come on just go for it!<br><span>09:20</span></p>
+                </div>
+                <div class="message my_message">
+                    <p>Okay okay I'll ask her later<br><span>09:20</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>You are coming over later right?<br><span>09:21</span></p>
+                </div>
+                <div class="message my_message">
+                    <p>I'm not sure yet<br><span>09:21</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>Come on it'll be fun<br><span>09:22</span></p>
+                </div>
+                <div class="message my_message">
+                    <p>Okay<br><span>09:23</span></p>
+                </div>
+                <div class="message friend_message">
+                    <p>When are you coming over?<br><span>15:36</span></p>
+                </div>
+            </div>
+            <div class="chatbox_input">
+                <input type="text" placeholder="Send a message...">
+                <button type="button" class="btn btn-success" style="margin-right: 2%; border-radius: 12px;"><i
+                        class="bi bi-send"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
